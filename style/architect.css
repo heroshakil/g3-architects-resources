@@ -1,9 +1,15 @@
 /* work sans font from google font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Work+Sans:wght@700&display=swap');
 
+/* shared styles */
+
 * {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Work Sans', sans-serif;
+}
+
+.banner-light-gray {
+    color: #727272;
 }
 
 .btn-primary {
@@ -67,14 +73,53 @@ nav li a {
     color: #131313;
 }
 
-.banner-description {
-    color: #727272;
-}
+
 
 .banner img {
     margin-top: 20px;
     width: 100%;
 }
+
+/* main section start */
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+
+}
+
+/* teams styles */
+
+.teams-container {
+    display: flex;
+    align-items: center;
+}
+
+.teams-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.teams-content {
+    padding-right: 70px;
+    padding-left: 70px;
+
+}
+
+.teams-title {
+    font-size: 2.8rem;
+}
+
+.teams-title .quick-list {
+    color: #727272;
+    font-weight: 500;
+}
+
+.teams-title .text-features {
+    color: #ff900e;
+    font-weight: 700;
+}
+
 
 /* responsive styles */
 @media screen and (max-width: 576px) {
@@ -82,51 +127,28 @@ nav li a {
         padding: 20px;
     }
 
-    nav {
+    nav,
+    .teams-container {
         flex-direction: column;
     }
+
+    .teams-img-container {
+        grid-template-columns: 1fr;
+    }
+    .teams-content {
+        padding-right: 20px;
+        padding-left: 20px;
+}
 }
 
 /* tablet ar medium device */
-@media screen  
-and (min-width: 576px) and (max-width: 960px) {
+@media screen and (min-width: 576px) and (max-width: 960px) {
     header {
         padding: 50px;
     }
 
-    nav {
+    nav,
+    .teams-container {
         flex-direction: column;
     }
-}
-/* main section start */
-main{
-    max-width: 1440px;
-    margin: 0 auto;
-}
-/* teams styles */
-
-.teams-container{
-    display: flex;
-    align-items: center;
-}
-.teams-img-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) ;
-    gap: 1.5rem;
-}
-.teams-content{
-    padding-right: 70px;
-    padding-left: 70px;
-
-}
-.teams-title{
-font-size: 2.8rem;
-}
-.teams-title .quick-list{
-    color: #727272;
-    font-weight: 500;
-}
-.teams-title .text-features{
-    color: #ff900e;
-    font-weight: 700;
 }
